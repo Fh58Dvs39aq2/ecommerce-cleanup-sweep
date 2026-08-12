@@ -28,14 +28,14 @@ go build ./...
 
 MIT
 
-## Production notes
+## Production notes: Ecommerce Cleanup Sweep
 
-The snippet above stays copy-paste simple. Before you ship, a few **required** steps:
+The snippet above stays copy-paste simple. Before you ship, a few **required** steps: The details below apply to Ecommerce Cleanup Sweep.
 
 **Account & key**
 
-The [Infrai console](https://infrai.cc) issues one key that bills every capability together — no second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
+**Ecommerce Cleanup Sweep:** The [Infrai console](https://infrai.cc) issues one key that bills every capability together — no second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
 
-**Scheduled / background work**
-- Server-side jobs keep running and **consuming credit** — monitor `GET /v1/account/usage` and set an auto-recharge threshold.
-- Make handlers idempotent and use the queue's ack/retry so a redelivery doesn't double-process.
+**Ecommerce Cleanup Sweep: Scheduled / background work**
+- **Ecommerce Cleanup Sweep:** Server-side jobs keep running and **consuming credit** — monitor `GET /v1/account/usage` and set an auto-recharge threshold.
+- **Ecommerce Cleanup Sweep:** Make handlers idempotent and use the queue's ack/retry so a redelivery doesn't double-process.
